@@ -16,7 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ThirdActivity extends AppCompatActivity {
-    public int klp=1;
+
     String k;
     private Button scan_btn , butto;
     private TextView textViewId, textViewDate ,textViewMed ;
@@ -52,12 +52,9 @@ public class ThirdActivity extends AppCompatActivity {
         butto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if(k=="CH100265") {
                     Intent koi = new Intent(ThirdActivity.this, FourActivity.class);
                     startActivity(koi);
-                }
-                else{}
+
             }
         });
     }
@@ -76,11 +73,11 @@ public class ThirdActivity extends AppCompatActivity {
                     //setting values to textviews
                     k=(obj.getString("patient-id"));
 
-                    if(klp==1) {
+                    if(k=="CH100265") {
                         textViewId.setText(obj.getString("patient-id"));
                         textViewDate.setText(obj.getString("date"));
                         textViewMed.setText(obj.getString("medicines"));
-                        klp=klp+1;
+
                     }
                     else{
                         Intent koio = new Intent(ThirdActivity.this, ThirteenthActivity.class);
