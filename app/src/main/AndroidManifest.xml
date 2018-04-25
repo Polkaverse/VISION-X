@@ -31,7 +31,8 @@
         <activity android:name=".NinthActivity" />
         <activity android:name=".TenthActivity" />
         <activity android:name=".EleventhActivity" />
-        <activity android:name=".TwelthActivity"></activity>
+        <activity android:name=".TwelthActivity" />
+        <activity android:name=".ThirteenthActivity"></activity>
     </application>
 
 </manifest>

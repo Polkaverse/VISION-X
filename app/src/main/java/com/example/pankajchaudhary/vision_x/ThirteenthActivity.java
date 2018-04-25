@@ -7,19 +7,20 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class EighthActivity extends AppCompatActivity {
+public class ThirteenthActivity extends AppCompatActivity {
     Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eighth);
+        setContentView(R.layout.activity_thirteenth);
+
 
         timer =new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent in=new Intent(EighthActivity.this,MainActivity.class);
+                Intent in=new Intent(ThirteenthActivity.this,MainActivity.class);
                 startActivity(in);
                 finish();
 

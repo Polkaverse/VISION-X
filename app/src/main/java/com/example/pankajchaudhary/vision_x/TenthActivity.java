@@ -51,6 +51,7 @@ public class TenthActivity extends AppCompatActivity {
                     command2 = "b";
                     command3 = "c";
                     command4 = "e";
+
                     try {
                         tct.setText("Processing... please wait");
 
@@ -58,6 +59,7 @@ public class TenthActivity extends AppCompatActivity {
                         outputStream.write(command2.getBytes());
                         outputStream.write(command3.getBytes());
                         outputStream.write(command4.getBytes());
+                        outputStream.write(command1.getBytes());
                         z=z+1;
                         timer=new Timer();
                         timer.schedule(new TimerTask() {
