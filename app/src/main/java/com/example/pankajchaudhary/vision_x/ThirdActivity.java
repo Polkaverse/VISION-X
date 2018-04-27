@@ -71,10 +71,10 @@ public class ThirdActivity extends AppCompatActivity {
                     //converting the data to json
                     JSONObject obj = new JSONObject(result.getContents());
                     //setting values to textviews
-                    k=(obj.getString("patient-id"));
+                    k=obj.getString("patient-id");
 
-                    if(k=="CH100265") {
-                        textViewId.setText(obj.getString("patient-id"));
+                    if(true )        {
+                        textViewId.setText(k);
                         textViewDate.setText(obj.getString("date"));
                         textViewMed.setText(obj.getString("medicines"));
 
@@ -92,7 +92,9 @@ public class ThirdActivity extends AppCompatActivity {
                     //in this case you can display whatever data is available on the qrcode
                     //to a toast
 
-                    Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+                    //Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+                    Intent koio = new Intent(ThirdActivity.this, ThirteenthActivity.class);
+                    startActivity(koio);
                 }
             }
         }
